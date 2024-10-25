@@ -6,7 +6,7 @@ export default function BannerOne() {
       <div className="w-full flex   h-full">
         <div className="w-[50%]   px-20 py-16">
           <h1 className="font-manrope font-bold text-4xl leading-snug sm:text-5xl text-left mb-5 text-black">
-            The Art of Building Website Seemlessly
+            The Art of Building Website Seamlessly
           </h1>
           <p className="text-lg font-medium leading-8 text-gray-400 text-left mb-10 max-w-xl mx-auto">
             New to coding? We’ve got you covered! With just a click, save time

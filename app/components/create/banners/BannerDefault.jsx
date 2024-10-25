@@ -4,7 +4,7 @@ export default function BannerDefault() {
       <div className="w-full max-w-7xl mx-auto px-4 lg:px-8 flex flex-col mt-16">
         <div className="w-full max-w-4xl mx-auto sm:px-12 mb-10 lg:mb-20">
           <h1 className="font-manrope font-bold text-4xl leading-snug sm:text-5xl text-center mb-5 text-black">
-            The Art of Building Website Seemlessly
+            The Art of Building Website Seamlessly
           </h1>
           <p className="text-xl font-medium leading-8 text-gray-400 text-center mb-14 max-w-xl mx-auto">
             New to coding? We’ve got you covered! With just a click, save time
