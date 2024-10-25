@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/collapsible";
 import { ChevronsUpDown } from "lucide-react";
 import { useDispatch } from "react-redux";
-import { setBanner, setSection } from "../states/createWebSlice";
+import { setSection } from "../states/createWebSlice";
 
 export default function CollapsibleSection() {
   const dispatch = useDispatch();

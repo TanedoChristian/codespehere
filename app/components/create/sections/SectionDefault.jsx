@@ -1,4 +1,4 @@
-import { ChartArea, ClockIcon, WalletIcon } from "lucide-react";
+import { ClockIcon, WalletIcon } from "lucide-react";
 
 export default function SectionDefault() {
   return (

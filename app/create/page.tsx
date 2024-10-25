@@ -22,7 +22,7 @@ export default function Page() {
   return (
     <div className="bg-[#f3f4f6]">
       <div className="p-20">
-        <div className="w-full flex  gap-10 h-[80vh]">
+        <div className="w-full flex  gap-10 h-[80vh]  ">
           <div className="h-full  bg-white rounded-lg min-w-[18vw] shadow-md">
             <h1 className="font-bold text-gray-900 px-8 py-5">Components</h1>
             <div className=" w-full -gray-200"></div>
