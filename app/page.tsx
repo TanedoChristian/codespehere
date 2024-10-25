@@ -11,11 +11,11 @@ export default function Home() {
       <section className="pt-8 lg:pt-32  bg-center bg-cover">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
           <h1 className="max-w-2xl mx-auto text-center font-manrope font-bold text-4xl text-gray-900 mb-5 md:text-5xl leading-[50px]">
-            Create your ideal website
+            Create your ideal website with our
             <span className="text-indigo-600 ml-2">Smart Tool </span>
           </h1>
           <p className="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-500 mb-9">
-            Make your own front end website using your favorite frameworks.
+            Make your own website using your favorite framework.
           </p>
           <a
             href="/create"
