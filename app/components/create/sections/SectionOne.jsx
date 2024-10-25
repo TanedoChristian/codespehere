@@ -9,12 +9,9 @@ export default function SectionOne() {
               <div className="w-full flex-col justify-center items-start gap-8 flex">
                 <div className="flex-col justify-start lg:items-start items-center gap-4 flex ">
                   <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
-                    <p className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
-                      Our achievement story is a testament to teamwork and
-                      perseverance. Together, we've overcome challenges,
-                      celebrated victories, and created a narrative of progress
-                      and success.
-                    </p>
+                  <p className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
+  Our achievement story is a testament to teamwork and perseverance. Together, we&apos;ve overcome challenges, celebrated victories, and created a narrative of progress and success.
+</p>
                   </div>
                 </div>
                 <div className="w-full flex-col justify-center items-start gap-3 flex">

@@ -12,12 +12,13 @@ import SectionOne from "../components/create/sections/SectionOne";
 import FooterDefault from "../components/create/footers/FooterDefault";
 import FooterOne from "../components/create/footers/FooterOne";
 import { useSelector } from "react-redux";
+import { RootState } from "../components/states/store";
 
 export default function Page() {
-  const header = useSelector((state) => state.createWeb.header);
-  const banner = useSelector((state) => state.createWeb.banner);
-  const section = useSelector((state) => state.createWeb.section);
-  const footer = useSelector((state) => state.createWeb.footer);
+  const header = useSelector((state: RootState) => state.createWeb.header);
+  const banner = useSelector((state: RootState) => state.createWeb.banner);
+  const section = useSelector((state :RootState) => state.createWeb.section);
+  const footer = useSelector((state :RootState) => state.createWeb.footer);
 
   return (
     <div className="bg-[#f3f4f6]">
