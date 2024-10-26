@@ -40,69 +40,39 @@ export default function Page() {
 
 
   return (
-    <div className="bg-[#f3f4f6]">
-      <div className="p-10 ">
-        <div ref={internalQuillRef} className="bg-white border"></div> 
-        <div className="w-full flex  gap-10 h-[80vh] mt-5 ">
-          <div className="h-full  bg-white rounded-lg min-w-[18vw] shadow-md " >
-            <h1 className="font-bold text-gray-900 px-8 py-5" >Components</h1>
-            <div className=" w-full -gray-200"></div>
-            <ul className="flex flex-col gap-3 p-8">
-              <li >
-                <CollapsibleHeader />
-              </li>
-              <li>
-                <CollapsibleBanner />
-              </li>
-              <li>
-                <CollapsibleSection />
-              </li>
-              <li>
-                <CollapsibleFooter />
-              </li>
-            </ul>
-          </div>
-          <div className="h-full w-full  bg-white rounded-lg  shadow-md overflow-auto" >
-            {header == "default" ? (
-              <HeaderDefault quill={quill} />
-            ) : header == "one" ? (
-              <HeaderOne />
-            ) : (
-              ""
-            )}
-
-            {banner == "default" ? (
-              <BannerDefault />
-            ) : banner == "one" ? (
-              <BannerOne />
-            ) : (
-              ""
-            )}
-
-            {section == "default" ? (
-              <SectionDefault />
-            ) : section == "one" ? (
-              <SectionOne />
-            ) : (
-              ""
-            )}
-
-            {footer == "default" ? (
-              <FooterDefault />
-            ) : footer == "one" ? (
-              <FooterOne />
-            ) : (
-              ""
-            )}
-
-            
-          </div>
-
-       
-        </div>
-      
+    <div className="bg-[#f3f4f6] overflow-auto">
+  <div className="p-5 md:p-10">
+    <div ref={internalQuillRef} className="bg-white border"></div>
+    <div className="w-full flex flex-col md:flex-row gap-5 md:gap-10 h-auto md:h-[80vh] mt-5">
+      <div className="h-full bg-white rounded-lg min-w-[90%] md:min-w-[18vw] shadow-md">
+        <h1 className="font-bold text-gray-900 px-5 md:px-8 py-5">Components</h1>
+        <div className="w-full border-b border-gray-200"></div>
+        <ul className="flex flex-col gap-3 p-5 md:p-8">
+          <li>
+            <CollapsibleHeader />
+          </li>
+          <li>
+            <CollapsibleBanner />
+          </li>
+          <li>
+            <CollapsibleSection />
+          </li>
+          <li>
+            <CollapsibleFooter />
+          </li>
+        </ul>
       </div>
-    
+      <div className="h-full w-full bg-white rounded-lg shadow-md overflow-auto">
+        {header === "default" ? <HeaderDefault quill={quill} /> : header === "one" ? <HeaderOne /> : null}
+
+        {banner === "default" ? <BannerDefault /> : banner === "one" ? <BannerOne /> : null}
+
+        {section === "default" ? <SectionDefault /> : section === "one" ? <SectionOne /> : null}
+
+        {footer === "default" ? <FooterDefault /> : footer === "one" ? <FooterOne /> : null}
+      </div>
     </div>
+  </div>
+</div>
   );
 }
