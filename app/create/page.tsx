@@ -13,6 +13,9 @@ import FooterDefault from "../components/create/footers/FooterDefault";
 import FooterOne from "../components/create/footers/FooterOne";
 import { useSelector } from "react-redux";
 import { RootState } from "../components/states/store";
+import { useQuill } from 'react-quilljs';
+import 'quill/dist/quill.snow.css';
+
 
 export default function Page() {
   const header = useSelector((state: RootState) => state.createWeb.header);
@@ -20,15 +23,32 @@ export default function Page() {
   const section = useSelector((state :RootState) => state.createWeb.section);
   const footer = useSelector((state :RootState) => state.createWeb.footer);
 
+  const { quill, quillRef: internalQuillRef } = useQuill({
+    modules: {
+      toolbar: [
+        [{ font: [] }, { size: [] }],
+        ['bold', 'italic', 'underline', 'strike'],
+        [{ color: [] }, { background: [] }],
+        [{ align: [] }],
+        ['link'],
+      ],
+    },
+  });
+
+ 
+
+
+
   return (
     <div className="bg-[#f3f4f6]">
-      <div className="p-20">
-        <div className="w-full flex  gap-10 h-[80vh]  ">
-          <div className="h-full  bg-white rounded-lg min-w-[18vw] shadow-md">
-            <h1 className="font-bold text-gray-900 px-8 py-5">Components</h1>
+      <div className="p-10 ">
+        <div ref={internalQuillRef} className="bg-white border"></div> 
+        <div className="w-full flex  gap-10 h-[80vh] mt-5 ">
+          <div className="h-full  bg-white rounded-lg min-w-[18vw] shadow-md " >
+            <h1 className="font-bold text-gray-900 px-8 py-5" >Components</h1>
             <div className=" w-full -gray-200"></div>
             <ul className="flex flex-col gap-3 p-8">
-              <li>
+              <li >
                 <CollapsibleHeader />
               </li>
               <li>
@@ -42,9 +62,9 @@ export default function Page() {
               </li>
             </ul>
           </div>
-          <div className="h-full w-full  bg-white rounded-lg  shadow-md overflow-auto">
+          <div className="h-full w-full  bg-white rounded-lg  shadow-md overflow-auto" >
             {header == "default" ? (
-              <HeaderDefault />
+              <HeaderDefault quill={quill} />
             ) : header == "one" ? (
               <HeaderOne />
             ) : (
@@ -74,9 +94,15 @@ export default function Page() {
             ) : (
               ""
             )}
+
+            
           </div>
+
+       
         </div>
+      
       </div>
+    
     </div>
   );
 }

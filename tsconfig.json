@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/create/headers/HeaderDefault.jsx", "app/create/page.jsx", "app/components/create/CollapsibleHeader.jsx"],
   "exclude": ["node_modules"]
 }
